@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenar Palavras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>PALAVRAS DO LEPO LEPO</h1>
+    <div>
+        <input type="text" id="palavra1" placeholder="Palavra 1">
+        <input type="text" id="palavra2" placeholder="Palavra 2">
+        <input type="text" id="palavra3" placeholder="Palavra 3">
+        <input type="text" id="palavra4" placeholder="Palavra 4">
+    </div>
+    <button onclick="ordenarPalavras()">Ordenar Palavras</button>
+    
+    <div id="resultado">
+        <p id="palavras-ordenadas"></p>
+    </div>
+
+    <script>
+        function ordenarPalavras() {
+          
+            let palavras = [
+                document.getElementById('palavra1').value.trim(),
+                document.getElementById('palavra2').value.trim(),
+                document.getElementById('palavra3').value.trim(),
+                document.getElementById('palavra4').value.trim()
+            ];
+
+  
+            palavras = palavras.filter(palavra => palavra !== '');
+
+     
+            palavras.sort();
+
+     
+            document.getElementById('palavras-ordenadas').textContent = "Palavras em ordem alfabética: " + palavras.join(', ');
+        }
+    </script>
+</body>
+</html>

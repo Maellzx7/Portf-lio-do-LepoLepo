@@ -1,0 +1,52 @@
+<svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fundo com padrão de grid -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#dfe6e9" stroke-width="0.5"/>
+  </pattern>
+  <rect width="800" height="300" fill="#f8f9fa"/>
+  <rect width="800" height="300" fill="url(#grid)"/>
+
+  <!-- Texto Principal com Sombra -->
+  <text x="400" y="110" font-family="monospace" font-size="48" text-anchor="middle" fill="#2d3436" 
+        style="filter: drop-shadow(3px 3px 2px rgba(0,0,0,0.3))">
+    3° BIMESTRE
+  </text>
+
+  <!-- Diagrama de Fluxo -->
+  <g transform="translate(250,150)">
+    <!-- Conectores -->
+    <path d="M 0,0 L 300,0" stroke="#0984e3" stroke-width="3" fill="none"/>
+    
+    <!-- Círculos nos Conectores -->
+    <circle cx="0" cy="0" r="15" fill="#6c5ce7"/>
+    <circle cx="150" cy="0" r="15" fill="#00b894"/>
+    <circle cx="300" cy="0" r="15" fill="#e17055"/>
+    
+    <!-- Ícones dentro dos círculos (representados por símbolos) -->
+    <text x="0" y="5" text-anchor="middle" fill="white" font-family="monospace">1</text>
+    <text x="150" y="5" text-anchor="middle" fill="white" font-family="monospace">2</text>
+    <text x="300" y="5" text-anchor="middle" fill="white" font-family="monospace">3</text>
+  </g>
+
+  <!-- Ícones de Desenvolvimento -->
+  <g transform="translate(200,200)">
+    <!-- Terminal/Console -->
+    <rect x="0" y="0" width="400" height="60" rx="5" fill="#2d3436"/>
+    <text x="20" y="30" fill="#00ff00" font-family="monospace" font-size="14">
+      > npm install
+      <tspan x="20" dy="20">Installing dependencies...</tspan>
+    </text>
+  </g>
+
+  <!-- Elementos Decorativos de Código -->
+  <text x="100" y="80" font-family="monospace" font-size="20" fill="#0984e3" transform="rotate(-15,100,80)">&lt;/&gt;</text>
+  <text x="700" y="80" font-family="monospace" font-size="20" fill="#0984e3" transform="rotate(15,700,80)">{  }</text>
+  
+  <!-- Círculos Decorativos com Gradiente -->
+  <circle cx="50" cy="250" r="20" fill="#74b9ff" opacity="0.5"/>
+  <circle cx="750" cy="250" r="20" fill="#74b9ff" opacity="0.5"/>
+
+  <!-- Linhas de Código Animadas -->
+  <line x1="50" y1="280" x2="200" y2="280" stroke="#00b894" stroke-width="2"/>
+  <line x1="600" y1="280" x2="750" y2="280" stroke="#00b894" stroke-width="2"/>
+</svg>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concatenar Palavras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <h1>CONCATENAR DO LEPO LEPO</h1>
+    <div>
+        <input type="text" id="palavra1" placeholder="Palavra 1">
+        <input type="text" id="palavra2" placeholder="Palavra 2">
+        <input type="text" id="palavra3" placeholder="Palavra 3">
+    </div>
+    <button onclick="concatenarPalavras()">Concatenar Palavras</button>
+
+    <div id="resultado">
+        <p id="palavras-concatenadas"></p>
+    </div>
+
+    <script>
+        function concatenarPalavras() {
+
+            let vetor1 = [document.getElementById('palavra1').value.trim()];
+            let vetor2 = [document.getElementById('palavra2').value.trim()];
+            let vetor3 = [document.getElementById('palavra3').value.trim()];
+
+            vetor1 = vetor1.filter(palavra => palavra.length > 0);
+            vetor2 = vetor2.filter(palavra => palavra.length > 0);
+            vetor3 = vetor3.filter(palavra => palavra.length > 0);
+
+
+            let vetorConcatenado = vetor1.concat(vetor2, vetor3);
+
+
+            document.getElementById('palavras-concatenadas').textContent =
+                "Palavras concatenadas: " + vetorConcatenado.join(', ');
+        }
+    </script>
+</body>
+
+</html>

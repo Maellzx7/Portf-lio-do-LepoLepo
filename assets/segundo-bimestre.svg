@@ -1,0 +1,41 @@
+<svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fundo com gradiente -->
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f0f0f0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e4e4e4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="300" fill="url(#grad)"/>
+  
+  <!-- Texto Principal -->
+  <text x="400" y="100" font-family="monospace" font-size="48" text-anchor="middle" fill="#2d3436">
+    <tspan x="400" dy="0">2° BIMESTRE</tspan>
+  </text>
+  
+  <!-- Elementos de Código -->
+  <!-- Símbolos de Função -->
+  <text x="150" y="180" font-family="monospace" font-size="24" fill="#6c5ce7">function( )</text>
+  
+  <!-- Símbolos de Classes -->
+  <text x="600" y="180" font-family="monospace" font-size="24" fill="#00b894">class { }</text>
+  
+  <!-- Janela de Código -->
+  <rect x="300" y="150" width="200" height="100" rx="10" fill="#2d3436"/>
+  <rect x="300" y="150" width="200" height="25" rx="10" fill="#636e72"/>
+  <circle cx="320" cy="162" r="5" fill="#ff7675"/>
+  <circle cx="340" cy="162" r="5" fill="#ffeaa7"/>
+  <circle cx="360" cy="162" r="5" fill="#00b894"/>
+  
+  <!-- Linhas de Código Estilizadas -->
+  <line x1="320" y1="195" x2="480" y2="195" stroke="#74b9ff" stroke-width="2"/>
+  <line x1="320" y1="215" x2="440" y2="215" stroke="#74b9ff" stroke-width="2"/>
+  <line x1="320" y1="235" x2="460" y2="235" stroke="#74b9ff" stroke-width="2"/>
+  
+  <!-- Elementos Decorativos -->
+  <path d="M50,50 L70,30 L90,50 L70,70 Z" fill="#6c5ce7" opacity="0.6"/>
+  <path d="M710,50 L730,30 L750,50 L730,70 Z" fill="#6c5ce7" opacity="0.6"/>
+  
+  <!-- Linhas de Conexão -->
+  <path d="M100,250 Q400,300 700,250" stroke="#0984e3" fill="none" stroke-width="2"/>
+</svg>

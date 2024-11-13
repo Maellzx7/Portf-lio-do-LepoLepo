@@ -1,0 +1,75 @@
+<svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fundo com gradiente radial -->
+  <defs>
+    <radialGradient id="grad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" style="stop-color:#f8f9fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e9ecef;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  <rect width="800" height="300" fill="url(#grad)"/>
+
+  <!-- Texto Principal com Efeito Tecnológico -->
+  <g>
+    <!-- Sombra do texto -->
+    <text x="400" y="120" font-family="monospace" font-size="48" text-anchor="middle" 
+          fill="#2d3436" opacity="0.1" transform="translate(3,3)">
+      4° BIMESTRE
+    </text>
+    <!-- Texto principal -->
+    <text x="400" y="120" font-family="monospace" font-size="48" text-anchor="middle" fill="#2d3436">
+      4° BIMESTRE
+    </text>
+  </g>
+
+  <!-- Interface de IDE Moderna -->
+  <g transform="translate(200,140)">
+    <!-- Barra de ferramentas -->
+    <rect x="0" y="0" width="400" height="30" fill="#343a40" rx="5"/>
+    <!-- Botões da barra de ferramentas -->
+    <circle cx="20" cy="15" r="5" fill="#ff7675"/>
+    <circle cx="40" cy="15" r="5" fill="#ffeaa7"/>
+    <circle cx="60" cy="15" r="5" fill="#00b894"/>
+    
+    <!-- Área de código -->
+    <rect x="0" y="30" width="400" height="100" fill="#2d3436" rx="0 0 5 5"/>
+    
+    <!-- Linhas de código simuladas -->
+    <text x="20" y="55" font-family="monospace" font-size="12" fill="#74b9ff">import React from 'react';</text>
+    <text x="20" y="75" font-family="monospace" font-size="12" fill="#00b894">const App = () => {</text>
+    <text x="20" y="95" font-family="monospace" font-size="12" fill="#ffeaa7">  return (</text>
+    <text x="20" y="115" font-family="monospace" font-size="12" fill="#ff7675">    &lt;div&gt;Final Project&lt;/div&gt;</text>
+  </g>
+
+  <!-- Elementos de Conexão -->
+  <g transform="translate(0,0)">
+    <!-- Linhas de circuito -->
+    <path d="M50,50 L150,50 L150,250 L50,250" 
+          stroke="#0984e3" 
+          fill="none" 
+          stroke-width="2"
+          stroke-linecap="round"/>
+    
+    <path d="M650,50 L750,50 L750,250 L650,250" 
+          stroke="#0984e3" 
+          fill="none" 
+          stroke-width="2"
+          stroke-linecap="round"/>
+  </g>
+
+  <!-- Ícones de Desenvolvimento -->
+  <g>
+    <!-- Ícone de Database -->
+    <ellipse cx="100" cy="200" rx="25" ry="15" fill="#6c5ce7" opacity="0.7"/>
+    <ellipse cx="100" cy="190" rx="25" ry="15" fill="#6c5ce7"/>
+    
+    <!-- Ícone de Cloud -->
+    <circle cx="700" cy="200" r="20" fill="#00b894" opacity="0.8"/>
+    <circle cx="680" cy="190" r="15" fill="#00b894" opacity="0.8"/>
+    <circle cx="720" cy="190" r="15" fill="#00b894" opacity="0.8"/>
+  </g>
+
+  <!-- Elementos de Finalização -->
+  <text x="400" y="270" font-family="monospace" font-size="14" text-anchor="middle" fill="#2d3436">
+    FINAL DE CURSO
+  </text>
+</svg>

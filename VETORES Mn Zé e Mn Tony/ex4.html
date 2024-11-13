@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contar Caracteres da Maior Palavra</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <h1>PALAVRAS DO LEPO LEPO</h1>
+    <div>
+        <input type="text" id="palavra1" placeholder="Palavra 1">
+        <input type="text" id="palavra2" placeholder="Palavra 2">
+        <input type="text" id="palavra3" placeholder="Palavra 3">
+        <input type="text" id="palavra4" placeholder="Palavra 4">
+        <input type="text" id="palavra5" placeholder="Palavra 5">
+    </div>
+    <button onclick="exibirMaiorPalavra()">Exibir Maior Palavra</button>
+    
+    <div id="resultado">
+        <p id="maior-palavra"></p>
+    </div>
+
+    <script>
+        function exibirMaiorPalavra() {
+            
+            let palavras = [
+                document.getElementById('palavra1').value.trim(),
+                document.getElementById('palavra2').value.trim(),
+                document.getElementById('palavra3').value.trim(),
+                document.getElementById('palavra4').value.trim(),
+                document.getElementById('palavra5').value.trim()
+            ];
+
+           
+            palavras = palavras.filter(palavra => palavra.length > 0);
+
+            if (palavras.length === 0) {
+                document.getElementById('maior-palavra').textContent = "Nenhuma palavra inserida.";
+                return;
+            }
+
+            let maiorPalavra = palavras.reduce((maior, atual) => atual.length > maior.length ? atual : maior, '');
+
+           
+            document.getElementById('maior-palavra').textContent = 
+                "Maior palavra: \"" + maiorPalavra + "\" com " + maiorPalavra.length + " caracteres.";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fundo preto -->
+  <rect width="800" height="300" fill="#000000"/>
+  
+  <!-- Texto Principal com Efeito de Código -->
+  <text x="400" y="100" font-family="monospace" font-size="48" text-anchor="middle" fill="#ffffff">
+    <tspan x="400" dy="0">1° BIMESTRE</tspan>
+  </text>
+  
+  <!-- Elementos de Desenvolvimento -->
+  <text x="150" y="180" font-family="monospace" font-size="24" fill="#00ff00">&lt;/&gt;</text>
+  <text x="650" y="180" font-family="monospace" font-size="24" fill="#00ff00">{  }</text>
+  
+  <!-- Monitor -->
+  <rect x="350" y="150" width="100" height="70" rx="5" fill="#333333"/>
+  <rect x="360" y="160" width="80" height="50" rx="2" fill="#1a1a1a"/>
+  <rect x="375" y="220" width="50" height="10" fill="#333333"/>
+  <rect x="360" y="230" width="80" height="5" fill="#333333"/>
+  
+  <!-- Linhas de Código -->
+  <line x1="100" y1="250" x2="300" y2="250" stroke="#00ff00" stroke-width="2"/>
+  <line x1="500" y1="250" x2="700" y2="250" stroke="#00ff00" stroke-width="2"/>
+  
+  <!-- Círculos -->
+  <circle cx="50" cy="50" r="20" fill="#00ff00" opacity="0.3"/>
+  <circle cx="750" cy="50" r="20" fill="#00ff00" opacity="0.3"/>
+</svg>

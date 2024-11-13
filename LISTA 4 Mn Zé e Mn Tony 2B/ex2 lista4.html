@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triângulos</title>
+</head>
+<body style="background-color: darkgray;">
+    <h1 style="color: crimson;">TRIÂNGULOS(OU NÃO) DO MANO TONY E DO MN ZÉ</h1>
+    <script>
+        
+        function ehTriangulo(a, b, c) {
+            return a + b > c && a + c > b && b + c > a;
+        }
+
+        
+        function tipoTriangulo(a, b, c) {
+            if (a === b && b === c) {
+                return "Equilátero";
+            } else if (a === b || a === c || b === c) {
+                return "Isósceles";
+            } else {
+                return "Escaleno";
+            }
+        }
+
+        
+        function main() {
+            for (var i = 1; i <= 5; i++) {
+                var lado1 = parseFloat(prompt("Digite o lado 1 do triângulo " + i + ":"));
+                var lado2 = parseFloat(prompt("Digite o lado 2 do triângulo " + i + ":"));
+                var lado3 = parseFloat(prompt("Digite o lado 3 do triângulo " + i + ":"));
+
+                if (ehTriangulo(lado1, lado2, lado3)) {
+                    var tipo = tipoTriangulo(lado1, lado2, lado3);
+                    alert("O triângulo " + i + " é " + tipo);
+                } else {
+                    alert("Os valores informados para o triângulo " + i + " não formam um triângulo válido.");
+                }
+            }
+        }
+        // cabummmmmmmmmmm lepo lepo chalegen easter egg
+
+        
+        main();
+    </script>
+</body>
+</html>

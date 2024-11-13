@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aumento</title>
+</head>
+<body style="background-color: darkgray;">
+    <center><h1 style="color: crimson;">Aumento de Salário da empresa do MN ZÉ E DO MN TONY</h1></center>
+    <p>Digite a quantidade de funcionários:</p>
+    <input type="number" id="quantidadeFuncionarios" onchange="calcularAumento()">
+
+    <script>
+       //cabuuuuuuuum lepo lepo chalenge
+        function calcularAumento() {
+            var quantidadeFuncionarios = parseInt(document.getElementById("quantidadeFuncionarios").value);
+            var salario;
+            var aumento;
+            var novoSalario;
+
+            for (var i = 1; i <= quantidadeFuncionarios; i++) {
+                salario = parseFloat(prompt("Digite o salário do funcionário " + i + ":"));
+
+                if (salario <= 2500) {
+                    aumento = salario * 0.10;
+                } else {
+                    aumento = salario * 0.08;
+                }
+
+                novoSalario = salario + aumento;
+                document.write("O novo salário do funcionário " + i + " é R$" + novoSalario.toFixed(2) + "<br>");
+            }
+        }
+    </script>
+</body>
+</html>

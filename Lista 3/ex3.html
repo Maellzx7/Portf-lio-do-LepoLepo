@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 20px;
+      background-color: #64649c;
+    }
+    h2 {
+      color: #333;
+    }
+    .result {
+      background-color: #22669e;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+    h1 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        color: rgb(89, 184, 201);
+    }
+    .produtos {
+      background-color: #fff;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+    .produto-item {
+      margin-bottom: 8px;
+    }
+    .produto-item span {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Loja do LepoLepo</h1>
+
+  <div class="produtos">
+    <h2>Produtos disponíveis:</h2>
+    <div class="produto-item"><span>Shorts:</span> R$ 70</div>
+    <div class="produto-item"><span>Camiseta:</span> R$ 50</div>
+    <div class="produto-item"><span>Cueca Vermelha com listras preta:</span> R$ 550</div>
+    <div class="produto-item"><span>Calça:</span> R$ 120</div>
+  </div>
+
+  <br>
+
+  <button onclick="calcularPrecos()">Calcular Preços</button>
+
+
+  <div id="resultado" class="result"></div>
+
+  <script>
+
+    const calcularPrecos = () => {
+      const produtos = [
+        { nome: "Shorts", preco: 70 },
+        { nome: "Camiseta", preco: 50 },
+        { nome: "Cueca Vermelha com listras preta", preco: 550 },
+        { nome: "Calça", preco: 120 }
+      ];
+
+      const resultado = produtos.reduce((acc, produto) => {
+        acc.precoTotal += produto.preco;
+
+      
+        if (!acc.maisBarato || produto.preco < acc.maisBarato.preco) {
+          acc.maisBarato = produto;
+        }
+
+   
+        if (!acc.maisCaro || produto.preco > acc.maisCaro.preco) {
+          acc.maisCaro = produto;
+        }
+
+        return acc;
+      }, { precoTotal: 0, maisBarato: null, maisCaro: null });
+
+   
+      document.getElementById("resultado").innerHTML = `
+        <strong>Resultado:</strong> 
+        <br>Preço Total: R$ ${resultado.precoTotal}
+        <br>Produto Mais Barato: ${resultado.maisBarato.nome} - R$ ${resultado.maisBarato.preco}
+        <br>Produto Mais Caro: ${resultado.maisCaro.nome} - R$ ${resultado.maisCaro.preco}
+      `;
+    };
+  </script>
+
+</body>
+</html>

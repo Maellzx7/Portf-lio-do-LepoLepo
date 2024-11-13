@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Primos</title>
+</head>
+<body style="background-color: darkgray;">
+  <center> <h1 style="color: crimson;" >Números Primos do MN ZÉ E DO MN TONY</h1></center> 
+    <script>
+        //cabuuuuuuum lepo lepo chalenge easter egg
+        function imprimirPrimo(numero) {
+            if (numero <= 1) {
+                return false;
+            }
+            for (var i = 2; i <= Math.sqrt(numero); i++) {
+                if (numero % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        
+        for (var  i = 2; i <= 100; i++) {
+            if (imprimirPrimo(i)) {
+                document.write(i + " - ");
+            }
+        }
+    </script>
+</body>
+</html>

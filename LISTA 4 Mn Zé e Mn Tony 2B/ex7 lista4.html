@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menções</title>
+</head>
+<body style="background-color: darkgray;">
+    <h1 style="color: crimson;">Menções dos Alunos pelos <br> PROFESSORES MAEL  E  TONY</h1>
+    <script>
+        // CABUUUUUUUUM LEPO LEPO CHALENGE EASTER EGG FINAL
+        function receberMencoes() {
+            var alunos = [];
+            var mbC = 0;
+            var iC = 0;
+
+           
+            for (var i = 0; i < 10; i++) {
+                var nome = prompt("Digite o nome do aluno " + (i+1) + ":");
+                var mencao = prompt("Digite a menção final do aluno " + (i+1) + " (MB ou I):").toUpperCase();
+
+                alunos.push({ nome: nome, mencao: mencao });
+
+              
+                if (mencao === "MB") {
+                    mbC++;
+                } else if (mencao === "I") {
+                    iC++;
+                }
+            }
+
+           
+            document.write("<p>Alunos com menção MB: " + mbC + "</p>");
+            document.write("<p>Alunos com menção I: " + iC + "</p>");
+        }
+
+        
+        receberMencoes();
+    </script>
+</body>
+</html>
